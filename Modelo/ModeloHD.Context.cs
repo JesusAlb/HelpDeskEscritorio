@@ -13,10 +13,10 @@ namespace HelpDeskEscritorio.Modelo
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class dbhelpdeskEntities : DbContext
+    public partial class dbhelpdeskV2Entities : DbContext
     {
-        public dbhelpdeskEntities()
-            : base("name=dbhelpdeskEntities")
+        public dbhelpdeskV2Entities()
+            : base("name=dbhelpdeskV2Entities")
         {
         }
     
@@ -25,10 +25,9 @@ namespace HelpDeskEscritorio.Modelo
             throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<ViewUsuario> ViewUsuarios { get; set; }
-        public virtual DbSet<VistaEventosCerrado> VistaEventosCerrados { get; set; }
-        public virtual DbSet<VistaEventosSinCerrar> VistaEventosSinCerrars { get; set; }
-        public virtual DbSet<VistaIncidentesCerrado> VistaIncidentesCerrados { get; set; }
-        public virtual DbSet<VistaIncidentesSinCerrar> VistaIncidentesSinCerrars { get; set; }
+        public virtual DbSet<vt_equipos> vt_equipos { get; set; }
+        public virtual DbSet<vt_evento_sin_cerrar> vt_evento_sin_cerrar { get; set; }
+        public virtual DbSet<vt_incidente_sin_cerrar> vt_incidente_sin_cerrar { get; set; }
+        public virtual DbSet<vt_usuarios> vt_usuarios { get; set; }
     }
 }

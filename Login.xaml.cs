@@ -23,7 +23,7 @@ namespace HelpDeskEscritorio
         public MainWindow()
         {
             InitializeComponent();
-            dbhelp.modelo.ViewUsuarios.SingleOrDefault(a => a.idUsuario == 1);
+            dbhelp.modelo.vt_usuarios.SingleOrDefault(a => a.id == 1);
         }
 
 

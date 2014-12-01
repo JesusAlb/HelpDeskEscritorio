@@ -14,10 +14,11 @@ namespace HelpDeskEscritorio.AccionesBD
         {
             try
             {
-                var usuarioEncontrado = dbhelp.modelo.ViewUsuarios.SingleOrDefault(a => a.username.Equals(usuario) && a.password.Equals(password));
+                var usuarioEncontrado = dbhelp.modelo.vt_usuarios.SingleOrDefault(a => a.nombre_usuario.Equals(usuario) && a.password.Equals(password));
                 if (usuarioEncontrado != null)
                 {
                     dbhelp.usuario = usuarioEncontrado;
+                    dbhelp.ip_servidor = dbhelp.modelo.vt_equipos.FirstOrDefault(a => a.nomTipoEquipo.Equals("Servidor IIS")).ip;
                     return true;
                 }
                 else
@@ -33,7 +34,7 @@ namespace HelpDeskEscritorio.AccionesBD
 
         public static int? numero_de_incidentes_abiertos(){
             try{
-                return dbhelp.modelo.VistaIncidentesSinCerrars.Where(a => a.status == 0).Count();
+                return dbhelp.modelo.vt_incidente_sin_cerrar.Where(a => a.estatus_incidente == 0).Count();
             }
             catch{
                 return null;
@@ -44,7 +45,7 @@ namespace HelpDeskEscritorio.AccionesBD
         {
             try
             {
-                return dbhelp.modelo.VistaEventosSinCerrars.Where(a => a.status == 0).Count();
+                return dbhelp.modelo.vt_evento_sin_cerrar.Where(a => a.estatus_evento == 0).Count();
             }
             catch
             {

@@ -9,7 +9,8 @@ namespace HelpDeskEscritorio
 {
     class dbhelp
     {
-        public static ViewUsuario usuario { get; set; }
-        public static dbhelpdeskEntities modelo = new dbhelpdeskEntities();
+        public static vt_usuarios usuario { get; set; }
+        public static string ip_servidor {get; set;}
+        public static dbhelpdeskV2Entities modelo = new dbhelpdeskV2Entities();
     }
 }

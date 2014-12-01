@@ -30,7 +30,7 @@ namespace HelpDeskEscritorio
         public Principal()
         {
             InitializeComponent();
-            lbelNombre.Content = dbhelp.usuario.nomCompleto;
+            lbelNombre.Content = dbhelp.usuario.nom_completo;
             this.manejadorNotifyIcon();
         }
 
@@ -44,9 +44,9 @@ namespace HelpDeskEscritorio
 
         private void dispatcherTimer_Tick(object sender, EventArgs e)
         {
-            if (dbhelp.usuario.username != null && conexion == true)
+            if (dbhelp.usuario.nombre_usuario != null && conexion == true)
             {
-                if (dbhelp.usuario.tipoUsuario == 0)
+                if (dbhelp.usuario.fk_idtipo == 0)
                 {
                     int num = accionesBD.numero_de_incidentes_abiertos().Value;
                     if (num == -1)
@@ -135,12 +135,12 @@ namespace HelpDeskEscritorio
 
         private void btnEventos_Click(object sender, RoutedEventArgs e)
         {
-            Process.Start("http://localhost:1698/autologin.aspx?usuario=" + dbhelp.usuario.username + "&password=" + dbhelp.usuario.password + "&peticion=1");
+            Process.Start("http://"+dbhelp.ip_servidor+"/helpdesk/autologin.aspx?id=" + dbhelp.usuario.id + "&peticion=1");
         }
 
         private void btnIncidentes_Click(object sender, RoutedEventArgs e)
         {
-            Process.Start("http://localhost:1698/autologin.aspx?usuario=" + dbhelp.usuario.username + "&password=" + dbhelp.usuario.password + "&peticion=0");
+            Process.Start("http://" + dbhelp.ip_servidor + "/helpdesk/autologin.aspx?id=" + dbhelp.usuario.id + "&peticion=0");
         }
 
         private void iconoNotificacion_Click(object sender, EventArgs e)
@@ -157,12 +157,12 @@ namespace HelpDeskEscritorio
 
         void item3_Click(object sender, EventArgs e)
         {
-            Process.Start("http://localhost:1698/autologin.aspx?usuario=" + dbhelp.usuario.username + "&password=" + dbhelp.usuario.password + "&peticion=1");
+            Process.Start("http://" + dbhelp.ip_servidor + "/helpdesk/autologin.aspx?id=" + dbhelp.usuario.id + "&peticion=1");
         }
 
         void item2_Click(object sender, EventArgs e)
         {
-            Process.Start("http://localhost:1698/autologin.aspx?usuario=" + dbhelp.usuario.username + "&password=" + dbhelp.usuario.password + "&peticion=0");
+            Process.Start("http://" + dbhelp.ip_servidor + "/helpdesk/autologin.aspx?id=" + dbhelp.usuario.id + "&peticion=0");
         }
 
         void item1_Click(object sender, EventArgs e)
