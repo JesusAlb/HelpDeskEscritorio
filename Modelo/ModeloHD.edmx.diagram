@@ -1,15 +1,9 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="1.0" xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx">
  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
-  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2007/06/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="4ea6b1ac3a154248a03674a7c97f7c5c" Name="Diagram1" ZoomLevel="73">
-        <EntityTypeShape EntityType="dbhelpdeskV2Model.vt_equipos" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="dbhelpdeskV2Model.vt_evento_sin_cerrar" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="dbhelpdeskV2Model.vt_incidente_sin_cerrar" Width="1.5" PointX="4.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="dbhelpdeskV2Model.vt_usuarios" Width="1.5" PointX="4.75" PointY="5.75" IsExpanded="true" />
-      </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
 </edmx:Edmx>

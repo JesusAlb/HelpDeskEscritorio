@@ -1,10 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+<edmx:Edmx Version="1.0" xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx">
   <!-- EF Runtime content -->
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="dbhelpdeskV2Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+      <Schema Namespace="dbhelpdeskV2Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2005" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2006/04/edm/ssdl">
         <!--Errores durante la generación:
 advertencia 6002: La tabla o vista 'dbhelpdeskV2.dbo.vt_equipos' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
         <EntityType Name="vt_equipos">
@@ -126,87 +126,87 @@ advertencia 6002: La tabla o vista 'dbhelpdeskV2.dbo.vt_usuarios' no tiene defin
         <EntityContainer Name="dbhelpdeskV2ModelStoreContainer">
           <EntitySet Name="vt_equipos" EntityType="Self.vt_equipos" store:Type="Views" store:Schema="dbo">
             <DefiningQuery>SELECT 
-    [vt_equipos].[id] AS [id], 
-    [vt_equipos].[nombre_completo] AS [nombre_completo], 
-    [vt_equipos].[nomTipoEquipo] AS [nomTipoEquipo], 
-    [vt_equipos].[nomMarcaEquipo] AS [nomMarcaEquipo], 
-    [vt_equipos].[serie_equipo] AS [serie_equipo], 
-    [vt_equipos].[memoriaRam] AS [memoriaRam], 
-    [vt_equipos].[disco_duro] AS [disco_duro], 
-    [vt_equipos].[nomMarcaMonitor] AS [nomMarcaMonitor], 
-    [vt_equipos].[serie_monitor] AS [serie_monitor], 
-    [vt_equipos].[ip] AS [ip], 
-    [vt_equipos].[mac] AS [mac], 
-    [vt_equipos].[nomMarcaMouse] AS [nomMarcaMouse], 
-    [vt_equipos].[serie_mouse] AS [serie_mouse], 
-    [vt_equipos].[nomMarcaTeclado] AS [nomMarcaTeclado], 
-    [vt_equipos].[serie_teclado] AS [serie_teclado], 
-    [vt_equipos].[procesador] AS [procesador]
-    FROM [dbo].[vt_equipos] AS [vt_equipos]</DefiningQuery>
+[vt_equipos].[id] AS [id], 
+[vt_equipos].[nombre_completo] AS [nombre_completo], 
+[vt_equipos].[nomTipoEquipo] AS [nomTipoEquipo], 
+[vt_equipos].[nomMarcaEquipo] AS [nomMarcaEquipo], 
+[vt_equipos].[serie_equipo] AS [serie_equipo], 
+[vt_equipos].[memoriaRam] AS [memoriaRam], 
+[vt_equipos].[disco_duro] AS [disco_duro], 
+[vt_equipos].[nomMarcaMonitor] AS [nomMarcaMonitor], 
+[vt_equipos].[serie_monitor] AS [serie_monitor], 
+[vt_equipos].[ip] AS [ip], 
+[vt_equipos].[mac] AS [mac], 
+[vt_equipos].[nomMarcaMouse] AS [nomMarcaMouse], 
+[vt_equipos].[serie_mouse] AS [serie_mouse], 
+[vt_equipos].[nomMarcaTeclado] AS [nomMarcaTeclado], 
+[vt_equipos].[serie_teclado] AS [serie_teclado], 
+[vt_equipos].[procesador] AS [procesador]
+FROM [dbo].[vt_equipos] AS [vt_equipos]</DefiningQuery>
           </EntitySet>
           <EntitySet Name="vt_evento_sin_cerrar" EntityType="Self.vt_evento_sin_cerrar" store:Type="Views" store:Schema="dbo">
             <DefiningQuery>SELECT 
-    [vt_evento_sin_cerrar].[id] AS [id], 
-    [vt_evento_sin_cerrar].[nombre] AS [nombre], 
-    [vt_evento_sin_cerrar].[descripcion] AS [descripcion], 
-    [vt_evento_sin_cerrar].[fecha_solicitud] AS [fecha_solicitud], 
-    [vt_evento_sin_cerrar].[fecha_cierre] AS [fecha_cierre], 
-    [vt_evento_sin_cerrar].[hora_inicial] AS [hora_inicial], 
-    [vt_evento_sin_cerrar].[hora_final] AS [hora_final], 
-    [vt_evento_sin_cerrar].[estatus_evento] AS [estatus_evento], 
-    [vt_evento_sin_cerrar].[solicitante] AS [solicitante], 
-    [vt_evento_sin_cerrar].[idsolicitante] AS [idsolicitante], 
-    [vt_evento_sin_cerrar].[soporte] AS [soporte], 
-    [vt_evento_sin_cerrar].[apoyo] AS [apoyo], 
-    [vt_evento_sin_cerrar].[tipo] AS [tipo], 
-    [vt_evento_sin_cerrar].[lugar] AS [lugar], 
-    [vt_evento_sin_cerrar].[asistencia] AS [asistencia], 
-    [vt_evento_sin_cerrar].[acomodo] AS [acomodo], 
-    [vt_evento_sin_cerrar].[fecha_realizacion] AS [fecha_realizacion]
-    FROM [dbo].[vt_evento_sin_cerrar] AS [vt_evento_sin_cerrar]</DefiningQuery>
+[vt_evento_sin_cerrar].[id] AS [id], 
+[vt_evento_sin_cerrar].[nombre] AS [nombre], 
+[vt_evento_sin_cerrar].[descripcion] AS [descripcion], 
+[vt_evento_sin_cerrar].[fecha_solicitud] AS [fecha_solicitud], 
+[vt_evento_sin_cerrar].[fecha_cierre] AS [fecha_cierre], 
+[vt_evento_sin_cerrar].[hora_inicial] AS [hora_inicial], 
+[vt_evento_sin_cerrar].[hora_final] AS [hora_final], 
+[vt_evento_sin_cerrar].[estatus_evento] AS [estatus_evento], 
+[vt_evento_sin_cerrar].[solicitante] AS [solicitante], 
+[vt_evento_sin_cerrar].[idsolicitante] AS [idsolicitante], 
+[vt_evento_sin_cerrar].[soporte] AS [soporte], 
+[vt_evento_sin_cerrar].[apoyo] AS [apoyo], 
+[vt_evento_sin_cerrar].[tipo] AS [tipo], 
+[vt_evento_sin_cerrar].[lugar] AS [lugar], 
+[vt_evento_sin_cerrar].[asistencia] AS [asistencia], 
+[vt_evento_sin_cerrar].[acomodo] AS [acomodo], 
+[vt_evento_sin_cerrar].[fecha_realizacion] AS [fecha_realizacion]
+FROM [dbo].[vt_evento_sin_cerrar] AS [vt_evento_sin_cerrar]</DefiningQuery>
           </EntitySet>
           <EntitySet Name="vt_incidente_sin_cerrar" EntityType="Self.vt_incidente_sin_cerrar" store:Type="Views" store:Schema="dbo">
             <DefiningQuery>SELECT 
-    [vt_incidente_sin_cerrar].[id] AS [id], 
-    [vt_incidente_sin_cerrar].[descripcion] AS [descripcion], 
-    [vt_incidente_sin_cerrar].[soporte] AS [soporte], 
-    [vt_incidente_sin_cerrar].[apoyo] AS [apoyo], 
-    [vt_incidente_sin_cerrar].[tipo] AS [tipo], 
-    [vt_incidente_sin_cerrar].[prioridad] AS [prioridad], 
-    [vt_incidente_sin_cerrar].[acciones] AS [acciones], 
-    [vt_incidente_sin_cerrar].[solucion] AS [solucion], 
-    [vt_incidente_sin_cerrar].[fecha_solicitud] AS [fecha_solicitud], 
-    [vt_incidente_sin_cerrar].[fecha_cierre] AS [fecha_cierre], 
-    [vt_incidente_sin_cerrar].[hora_inicial] AS [hora_inicial], 
-    [vt_incidente_sin_cerrar].[hora_final] AS [hora_final], 
-    [vt_incidente_sin_cerrar].[estatus_incidente] AS [estatus_incidente], 
-    [vt_incidente_sin_cerrar].[solicitante] AS [solicitante], 
-    [vt_incidente_sin_cerrar].[fk_idusuario_solicitante] AS [fk_idusuario_solicitante]
-    FROM [dbo].[vt_incidente_sin_cerrar] AS [vt_incidente_sin_cerrar]</DefiningQuery>
+[vt_incidente_sin_cerrar].[id] AS [id], 
+[vt_incidente_sin_cerrar].[descripcion] AS [descripcion], 
+[vt_incidente_sin_cerrar].[soporte] AS [soporte], 
+[vt_incidente_sin_cerrar].[apoyo] AS [apoyo], 
+[vt_incidente_sin_cerrar].[tipo] AS [tipo], 
+[vt_incidente_sin_cerrar].[prioridad] AS [prioridad], 
+[vt_incidente_sin_cerrar].[acciones] AS [acciones], 
+[vt_incidente_sin_cerrar].[solucion] AS [solucion], 
+[vt_incidente_sin_cerrar].[fecha_solicitud] AS [fecha_solicitud], 
+[vt_incidente_sin_cerrar].[fecha_cierre] AS [fecha_cierre], 
+[vt_incidente_sin_cerrar].[hora_inicial] AS [hora_inicial], 
+[vt_incidente_sin_cerrar].[hora_final] AS [hora_final], 
+[vt_incidente_sin_cerrar].[estatus_incidente] AS [estatus_incidente], 
+[vt_incidente_sin_cerrar].[solicitante] AS [solicitante], 
+[vt_incidente_sin_cerrar].[fk_idusuario_solicitante] AS [fk_idusuario_solicitante]
+FROM [dbo].[vt_incidente_sin_cerrar] AS [vt_incidente_sin_cerrar]</DefiningQuery>
           </EntitySet>
           <EntitySet Name="vt_usuarios" EntityType="Self.vt_usuarios" store:Type="Views" store:Schema="dbo">
             <DefiningQuery>SELECT 
-    [vt_usuarios].[id] AS [id], 
-    [vt_usuarios].[nombre_usuario] AS [nombre_usuario], 
-    [vt_usuarios].[nom_completo] AS [nom_completo], 
-    [vt_usuarios].[password] AS [password], 
-    [vt_usuarios].[nom_tipo] AS [nom_tipo], 
-    [vt_usuarios].[extension_telefonica] AS [extension_telefonica], 
-    [vt_usuarios].[nom_depto] AS [nom_depto], 
-    [vt_usuarios].[nom_coordinacion] AS [nom_coordinacion], 
-    [vt_usuarios].[nom_area] AS [nom_area], 
-    [vt_usuarios].[nom_puesto] AS [nom_puesto], 
-    [vt_usuarios].[fk_idtipo] AS [fk_idtipo], 
-    [vt_usuarios].[correo] AS [correo], 
-    [vt_usuarios].[nom_institucion] AS [nom_institucion]
-    FROM [dbo].[vt_usuarios] AS [vt_usuarios]</DefiningQuery>
+[vt_usuarios].[id] AS [id], 
+[vt_usuarios].[nombre_usuario] AS [nombre_usuario], 
+[vt_usuarios].[nom_completo] AS [nom_completo], 
+[vt_usuarios].[password] AS [password], 
+[vt_usuarios].[nom_tipo] AS [nom_tipo], 
+[vt_usuarios].[extension_telefonica] AS [extension_telefonica], 
+[vt_usuarios].[nom_depto] AS [nom_depto], 
+[vt_usuarios].[nom_coordinacion] AS [nom_coordinacion], 
+[vt_usuarios].[nom_area] AS [nom_area], 
+[vt_usuarios].[nom_puesto] AS [nom_puesto], 
+[vt_usuarios].[fk_idtipo] AS [fk_idtipo], 
+[vt_usuarios].[correo] AS [correo], 
+[vt_usuarios].[nom_institucion] AS [nom_institucion]
+FROM [dbo].[vt_usuarios] AS [vt_usuarios]</DefiningQuery>
           </EntitySet>
         </EntityContainer>
       </Schema>
     </edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
-      <Schema Namespace="dbhelpdeskV2Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+      <Schema Namespace="dbhelpdeskV2Model" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2006/04/edm">
         <EntityType Name="vt_equipos">
           <Key>
             <PropertyRef Name="id" />
@@ -253,10 +253,10 @@ advertencia 6002: La tabla o vista 'dbhelpdeskV2.dbo.vt_usuarios' no tiene defin
           <Property Name="id" Type="Int32" Nullable="false" />
           <Property Name="nombre" Type="String" MaxLength="60" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="descripcion" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="fecha_solicitud" Type="DateTime" Nullable="false" Precision="3" />
-          <Property Name="fecha_cierre" Type="DateTime" Precision="3" />
-          <Property Name="hora_inicial" Type="DateTime" Precision="3" />
-          <Property Name="hora_final" Type="DateTime" Precision="3" />
+          <Property Name="fecha_solicitud" Type="DateTime" Nullable="false" />
+          <Property Name="fecha_cierre" Type="DateTime" />
+          <Property Name="hora_inicial" Type="DateTime" />
+          <Property Name="hora_final" Type="DateTime" />
           <Property Name="estatus_evento" Type="Int32" Nullable="false" />
           <Property Name="solicitante" Type="String" MaxLength="121" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="idsolicitante" Type="Int32" Nullable="false" />
@@ -266,7 +266,7 @@ advertencia 6002: La tabla o vista 'dbhelpdeskV2.dbo.vt_usuarios' no tiene defin
           <Property Name="lugar" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
           <Property Name="asistencia" Type="Int32" Nullable="false" />
           <Property Name="acomodo" Type="String" MaxLength="25" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="fecha_realizacion" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="fecha_realizacion" Type="DateTime" Nullable="false" />
         </EntityType>
         <EntityType Name="vt_incidente_sin_cerrar">
           <Key>
@@ -286,10 +286,10 @@ advertencia 6002: La tabla o vista 'dbhelpdeskV2.dbo.vt_usuarios' no tiene defin
           <Property Name="prioridad" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="acciones" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
           <Property Name="solucion" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
-          <Property Name="fecha_solicitud" Type="DateTime" Nullable="false" Precision="3" />
-          <Property Name="fecha_cierre" Type="DateTime" Precision="3" />
-          <Property Name="hora_inicial" Type="DateTime" Precision="3" />
-          <Property Name="hora_final" Type="DateTime" Precision="3" />
+          <Property Name="fecha_solicitud" Type="DateTime" Nullable="false" />
+          <Property Name="fecha_cierre" Type="DateTime" />
+          <Property Name="hora_inicial" Type="DateTime" />
+          <Property Name="hora_final" Type="DateTime" />
           <Property Name="estatus_incidente" Type="Int32" Nullable="false" />
           <Property Name="solicitante" Type="String" MaxLength="121" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="fk_idusuario_solicitante" Type="Int32" Nullable="false" />
@@ -317,7 +317,7 @@ advertencia 6002: La tabla o vista 'dbhelpdeskV2.dbo.vt_usuarios' no tiene defin
           <Property Name="correo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="nom_institucion" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
         </EntityType>
-        <EntityContainer Name="dbhelpdeskV2Entities" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="dbhelpdeskV2Entities">
           <EntitySet Name="vt_equipos" EntityType="Self.vt_equipos" />
           <EntitySet Name="vt_evento_sin_cerrar" EntityType="Self.vt_evento_sin_cerrar" />
           <EntitySet Name="vt_incidente_sin_cerrar" EntityType="Self.vt_incidente_sin_cerrar" />
@@ -327,7 +327,7 @@ advertencia 6002: La tabla o vista 'dbhelpdeskV2.dbo.vt_usuarios' no tiene defin
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
     <edmx:Mappings>
-      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+      <Mapping Space="C-S" xmlns="urn:schemas-microsoft-com:windows:storage:mapping:CS">
         <EntityContainerMapping StorageEntityContainer="dbhelpdeskV2ModelStoreContainer" CdmEntityContainer="dbhelpdeskV2Entities">
           <EntitySetMapping Name="vt_equipos">
             <EntityTypeMapping TypeName="dbhelpdeskV2Model.vt_equipos">
@@ -419,7 +419,7 @@ advertencia 6002: La tabla o vista 'dbhelpdeskV2.dbo.vt_usuarios' no tiene defin
     </edmx:Mappings>
   </edmx:Runtime>
   <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
-  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <Designer xmlns="http://schemas.microsoft.com/ado/2007/06/edmx">
     <Connection>
       <DesignerInfoPropertySet>
         <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
@@ -430,7 +430,7 @@ advertencia 6002: La tabla o vista 'dbhelpdeskV2.dbo.vt_usuarios' no tiene defin
         <DesignerProperty Name="ValidateOnBuild" Value="true" />
         <DesignerProperty Name="EnablePluralization" Value="false" />
         <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
-        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="UseLegacyProvider" Value="true" />
         <DesignerProperty Name="CodeGenerationStrategy" Value="Ninguno" />
       </DesignerInfoPropertySet>
     </Options>
